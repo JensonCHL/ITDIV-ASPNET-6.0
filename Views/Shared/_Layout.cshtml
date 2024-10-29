@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@using Microsoft.AspNetCore.Http
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ASP2</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASP2.styles.css" asp-append-version="true" />
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+        }
+
+        .navbar .burger-menu {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .burger-menu span {
+            width: 100%;
+            height: 4px;
+            background-color: #000;
+            display: block;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background-color: maroon;
+            color: white;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            width: 200px;
+            height: calc(100vh - 60px);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+
+        .dropdown-item {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: darkred;
+        }
+
+        .close-dropdown {
+            padding: 5px;
+            cursor: pointer;
+            color: white;
+            background-color: darkred;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .navbar .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+
+
+        .auth-buttons a {
+            padding: 8px 15px;
+            border: 1px solid #f28b82;
+            
+            border-radius: 5px;
+            text-decoration: none;
+            color: #f28b82;
+            
+            text-align: center;
+        }
+
+        .auth-buttons a,
+        a.register {
+            background-color: #f28b82;
+            
+            color: white;
+            border: none;
+        }
+
+        .auth-buttons a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            background-color: #f28b82;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="navbar-brand">Rent Car</span>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="close-dropdown" onclick="closeDropdown()">&times;</div>
+                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="dropdown-item" asp-area="" asp-controller="History" asp-action="History" asp-route-customerId="@Context.Session.GetString("Customer_id")">Riwayat Penyewaan</a>
+                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Contact">Kontak Kami</a>
+            </div>
+            @if (Context.Session.GetString("UserName") != null)
+            {
+                <span>Hello, @Context.Session.GetString("UserName")</span>
+                <a asp-controller="Account" asp-action="Logout">Logout</a>
+            }
+            else
+            {
+                <div class="auth-buttons">
+                    <a asp-controller="Account" asp-action="Login" class="login">Login</a>
+                    <a asp-controller="Account" asp-action="Register" class="register">Register</a>
+                </div>
+            }
+
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+
+        &copy; 2024 - RentCar - Semua Hak Cipta Dilindungi
+
+    </footer>
+
+    <script>
+        
+        document.getElementById('burgerMenu').addEventListener('click', function () {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('show');
+        });
+
+        
+        function closeDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.remove('show');
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

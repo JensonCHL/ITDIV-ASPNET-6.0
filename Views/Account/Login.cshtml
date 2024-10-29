@@ -1,0 +1,103 @@
+﻿@page
+@model ITDIV.Views.Account.LoginModel
+@{
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f2f7;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #e4cfff;
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffcad4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+        color: #333;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container">
+    <h2>Login ke RentCar</h2>
+    
+    <form asp-action="Login" method="post">
+        <div class="form-group">
+            <label for="UserName" class="form-label">UserName</label>
+            <input type="text" id="UserName" name="UserName" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    
+    <p>
+        Belum punya akun? <a href="/Account/Register">Registrasi disini</a>
+    </p>
+</div>

@@ -1,0 +1,106 @@
+﻿@model ITDIV.Models.Register.Register1Model
+@{
+
+}
+
+<style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f2f7;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: #e4cfff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background-color: #ffcad4;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        max-width: full;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    button {
+        width: 100%;
+        
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2>Registrasi ke RentCar</h2>
+    <form method="post" asp-action="Register">
+        <div class="mb-3">
+            <label class="form-label">Nama Lengkap</label>
+            <input name="FullName" type="text" class="form-control" placeholder="Masukan nama lengkap Anda"  required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input name="Email" type="email" class="form-control" id="Email" name="Email" placeholder="Masukan Email Anda" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input name="Password" type="password" class="form-control" id="Password" name="Password" placeholder="Masukan password Anda" required />
+        </div>
+        <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Re-Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Masukan kembali password anda" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nomor Telepon</label>
+            <input name="Phone_number" type="tel" class="form-control" id="Phone_number" name="Phone_number" placeholder="Masukan Nomor Telefon Anda" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Alamat</label>
+            <textarea name="Address" class="form-control" id="Address" name="Address" rows="3" placeholder="Masukan alamat Anda" required></textarea>
+        </div>
+        <button type="submit" class="btn">Sumbit Registrasi</button>
+    </form>
+    <p>Sudah punya akun? <a href="/Account/Login">Login disinis</a></p>
+</div>

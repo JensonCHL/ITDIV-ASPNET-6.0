@@ -1,0 +1,269 @@
+﻿@model List<ITDIV.Models.AvailableView.AvailableModel>
+@{
+}
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightgrey;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .container {
+        max-width: full;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        background-color: #f7f2f8;
+        border-radius: 8px;
+        row-gap: 10%;
+    }
+
+    form{
+        margin-bottom: 10%;
+        background-color: #bde0fe;
+        
+    }
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="date"],
+    select,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: lightcoral;
+        color: white;
+        border: none;
+        cursor: pointer;
+        max-width: 150px;
+        max-height: 69px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-right: 10px;
+        padding-right: 222px;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 30%;
+        margin-bottom: 20px;
+        background-color: #bde0fe;
+        border-radius: 5px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        margin: 0 0 10px;
+    }
+
+    .card-text {
+        margin: 0 0 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #fbe0b7;
+        color: white;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .btn:hover {
+        background-color: #d6726e;
+    }
+    .navbar {
+        background-color: #d8bfea;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .btn-login,
+    .btn-register {
+        background-color: #f28b82;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn-login:hover,
+    .btn-register:hover {
+        background-color: #d6726e;
+    }
+
+    .navbar .btn-login,
+    .navbar .btn-register {
+        background-color: #f28b82;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar .btn-login:hover,
+    .navbar .btn-register:hover {
+        background-color: #d6726e;
+    }
+
+    .footer {
+        background-color: #d8bfea;
+        color: #333;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+    .rowdalem{
+        margin: 2%;
+    }
+</style>
+
+<h2>Selamat Datang di Rental Mobil Kami</h2>
+
+
+<div class="container">
+    <form method="post" asp-action="Index">
+        <div class="row">
+            <div class="rowdalem">
+                <label for="pickupDate" class="form-label">Pickup Date</label>
+                <input type="date" id="pickupDate" name="pickupDate" required />
+            </div>
+            <div class="rowdalem">
+                <label for="returnDate" class="form-label">Return Date</label>
+                <input type="date" id="returnDate" name="returnDate" required />
+            </div>
+            <div class="rowdalem">
+                <label for="year" class="form-label">Tahun Pembuatan</label>
+                <select id="year" name="year">
+                    <option selected value="">Semua Tahun</option>
+                    @for (int i = DateTime.Now.Year; i >= 1900; i--)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+            </div>
+            <button type="submit">Cari</button>
+        </div>
+    </form>
+
+    <div>
+        <label for="sortOptions">Sort by:</label>
+        <select id="sortOptions" onchange="sortCars()">
+            <option value="default">Default</option>
+            <option value="asc">Price Low to High</option>
+            <option value="desc">Price High to Low</option>
+        </select>
+    </div>
+
+    <div class="row" id="carList">
+        @if (Model.Any())
+        {
+            foreach (var car in Model)
+            {
+                <div class="card" data-price="@car.PricePerDay">
+                    <img src="@car.ImageLink" alt="Gambar Broken" />
+                    <div class="card-body">
+                        <h5 class="card-title">@car.Name</h5>
+                        <p class="card-text">Tahun: @car.Year</p>
+                        <p class="card-text">Harga per Hari: Rp @car.PricePerDay.ToString() / hari</p>
+                        <a asp-controller="Sewa" asp-action="Sewa" asp-route-CarId="@car.Car_id" class="btn">Sewa Sekarang</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p class="text-center">Tidak ada mobil yang tersedia.</p>
+        }
+    </div>
+</div>
+
+<script>
+    function sortCars() {
+        const sortOption = document.getElementById("sortOptions").value;
+        const carList = document.getElementById("carList");
+        const cards = Array.from(carList.getElementsByClassName("card"));
+
+        cards.sort((a, b) => {
+            const priceA = parseFloat(a.getAttribute("data-price"));
+            const priceB = parseFloat(b.getAttribute("data-price"));
+
+            if (sortOption === "asc") {
+                return priceA - priceB;
+            } else if (sortOption === "desc") {
+                return priceB - priceA; 
+            }
+            return 0; 
+        });
+
+        carList.innerHTML = "";
+        cards.forEach(card => carList.appendChild(card));
+    }
+</script>

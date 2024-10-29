@@ -1,0 +1,145 @@
+﻿@model List<ITDIV.Models.SewaView.SewaView>
+@using Microsoft.AspNetCore.Http
+@{
+}
+@Html.AntiForgeryToken()
+@* Biar aman CUyy *@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f2f8;
+        
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        background-color: #f7f2f8;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .car-image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+     
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        max-width: full;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+    }
+
+    .col {
+        flex: 1;
+        padding: 5px;
+        
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #ffcad4;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .rowa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cola {
+        flex: 1;
+    }
+</style>
+
+<div class="container">
+    <h2 class="title">SewaMobil</h2> 
+
+    <div class="car-images">
+        @foreach (var car in Model)
+        {
+            <img src="@car.image_link" alt="@car.name" class="car-image" />
+        }
+    </div>
+
+    <div class="card">
+        <h3 class="title">Informasi Mobil</h3> 
+
+        <div class="row">
+            <div class="col"><strong>Tipe Mobil:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.model</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Nama Mobil:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.name</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Transmisi:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.transmission</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Jumlah Penumpang:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.number_of_car_seats</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Nama Penyewa:</strong></div>
+            <div class="col">@Context.Session.GetString("UserName")</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Tanggal Sewa:</strong></div>
+            <div class="col">@DateTime.Now.ToShortDateString()</div> 
+        </div>
+        <div class="row">
+            <div class="col"><strong>Harga Sewa:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.price_per_day.ToString("C")</div>
+        </div>
+        <div class="row">
+            <div class="col"><strong>Total Harga Sewa:</strong></div>
+            <div class="col">@Model.FirstOrDefault()?.price_per_day.ToString("C")</div>
+        </div>
+        <div class="rowa">
+            <div class="cola" colspan="2">
+                <form asp-controller="Sewa" asp-action="ConfirmRental" method="post">
+                    <input type="hidden" name="carId" value="@Model.FirstOrDefault()?.Car_id" />
+                    <button type="submit" class="btn">Sewa Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

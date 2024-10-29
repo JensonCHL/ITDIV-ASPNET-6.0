@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\controllers\\sewacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:controllers\\sewacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\controllers\\getcar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:controllers\\getcar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\views\\getcar\\carsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:views\\getcar\\carsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|d:\\itdiv\\miniproject\\asp\\lastasp6mvc\\itdiv\\itdiv.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DDC2BAE3-A036-41B3-803A-07D0CB127CBF}|ITDIV.csproj|solutionrelative:itdiv.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistoryController.cs",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\HistoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HistoryController.cs",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\HistoryController.cs",
+              "RelativeToolTip": "Controllers\\HistoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T06:26:50.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAlwCkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T01:23:47.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwIAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T01:21:57.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAIIAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T01:11:33.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "carsview.cshtml",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\GetCar\\carsview.cshtml",
+              "RelativeDocumentMoniker": "Views\\GetCar\\carsview.cshtml",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Views\\GetCar\\carsview.cshtml",
+              "RelativeToolTip": "Views\\GetCar\\carsview.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T15:37:06.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetCar.cs",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\GetCar.cs",
+              "RelativeDocumentMoniker": "Controllers\\GetCar.cs",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\GetCar.cs",
+              "RelativeToolTip": "Controllers\\GetCar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:30:11.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:28:32.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SewaController.cs",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\SewaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SewaController.cs",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\Controllers\\SewaController.cs",
+              "RelativeToolTip": "Controllers\\SewaController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T04:23:24.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ITDIV.csproj",
+              "DocumentMoniker": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\ITDIV.csproj",
+              "RelativeDocumentMoniker": "ITDIV.csproj",
+              "ToolTip": "D:\\ITDIV\\MiniProject\\ASP\\lastASP6MVC\\ITDIV\\ITDIV.csproj",
+              "RelativeToolTip": "ITDIV.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-28T11:29:23.826Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

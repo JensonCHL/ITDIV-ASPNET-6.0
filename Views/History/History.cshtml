@@ -1,0 +1,118 @@
+﻿@model List<ITDIV.Models.RentalView.RentalModel>
+@* @model ITDIV.Views.History.HistoryModel *@
+@{
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f6f2f7;
+        
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+       
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        
+        margin: 30px auto;
+       
+        background-color: white;
+       
+        border-radius: 8px;
+       
+        overflow: hidden;
+        
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .table th,
+    .table td {
+        padding: 16px;
+       
+        text-align: left;
+        
+        border-bottom: 1px solid #e0e0e0;
+        
+    }
+
+    .table th {
+        background-color: #d3d3d3;
+        
+        color: #333;
+        
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+        
+    }
+
+    .no-history {
+        text-align: center;
+        color: #666;
+       
+        margin: 20px 0;
+       
+        font-size: 1.2em;
+        
+    }
+
+    .paid {
+        color: green;
+        
+        font-weight: bold;
+        
+    }
+
+    .unpaid {
+        color: red;
+        
+        font-weight: bold;
+    }
+</style>
+
+<h1>Riwayat Penyewaan Mobil</h1>
+<h1 class="">Mobil yang pernah disewa</h1>
+@if (Model == null || !Model.Any())
+{
+    <p class="no-history">Tidka ada mobil rental</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tanggals Sewa</th>
+                <th>Mobil</th>
+                <th>Harga Sewa per Hari</th>
+                <th>Total Hari</th>
+                <th>Total Harga</th>
+                <th>Status Pembayaran</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@($"{item.RentalDate.ToShortDateString()} - {item.ReturnDate.ToShortDateString()}")</td>
+                    <td>@item.CarName</td>
+                    <td>Rp @item.Price_per_day.ToString("N0")</td>
+                    <td>@(item.ReturnDate.Subtract(item.RentalDate).Days)</td> <!-- Calculate total days -->
+                    <td>Rp @item.TotalPrice.ToString("N0")</td> <!-- Format total price -->
+                    <td class="@(item.PaymentStatus ? "paid" : "unpaid")">
+                        @(item.PaymentStatus ? "Sudah Dibayar" : "Belum Dibayar")
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
